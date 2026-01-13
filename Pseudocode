@@ -1,0 +1,60 @@
+START PROGRAM
+
+Create ArrayList days
+Create ArrayList temp
+
+Add "Monday" to days
+Add "Tuesday" to days
+Add "Wednesday" to days
+Add "Thursday" to days
+Add "Friday" to days
+Add "Saturday" to days
+Add "Sunday" to days
+
+Create Scanner object
+
+FOR index from 0 to size of days - 1
+    Prompt user to enter average temperature for days[index]
+    Read temperature value
+    Add temperature to temp list
+END FOR
+
+Clear scanner input buffer
+
+Prompt user to enter a day of the week or "week"
+Read user input
+
+IF user input equals "week"
+    Set total to 0
+
+    Display "Weekly Temperatures"
+
+    FOR index from 0 to size of days - 1
+        Display days[index] and temp[index]
+        Add temp[index] to total
+    END FOR
+
+    Calculate weeklyAverage = total / number of temperatures
+    Display weeklyAverage
+
+ELSE
+    Set found flag to false
+
+    FOR index from 0 to size of days - 1
+        IF days[index] equals user input
+            Display days[index] and temp[index]
+            Set found flag to true
+            Exit loop
+        END IF
+    END FOR
+
+    IF found is false
+        Display "Invalid day entered"
+    END IF
+END IF
+
+Close Scanner
+
+END PROGRAM
+
+
